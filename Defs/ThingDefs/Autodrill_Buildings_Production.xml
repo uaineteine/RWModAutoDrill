@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--******** META ********-->
+
+	<ThingDef Abstract="True" Name="AutoDrill" ParentName="BuildingBase">
+		<tickerType>Rare</tickerType>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<pathCost>70</pathCost>
+		<fillPercent>0.5</fillPercent>
+		<designationCategory>Production</designationCategory>
+		<rotatable>true</rotatable>
+		<terrainAffordanceNeeded>Medium</terrainAffordanceNeeded>
+		<uiIconOffset>(0, 0.03)</uiIconOffset>
+		<uiIconScale>0.85</uiIconScale>
+		<minifiedDef>MinifiedThing</minifiedDef>
+		<thingCategories><li>BuildingsProduction</li></thingCategories>
+		<placeWorkers><li>PlaceWorker_DeepDrill</li></placeWorkers>
+		<drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+		<building><uninstallWork>2000</uninstallWork></building>
+		<statBases>
+			<MaxHitPoints>300</MaxHitPoints>
+			<WorkToBuild>10000</WorkToBuild>
+			<Flammability>0.5</Flammability>
+			<Beauty>-25</Beauty>
+			<Mass>50</Mass>
+		</statBases>
+	</ThingDef>
+
+<!--******** INHERET ********-->
+
+
+<!--
+	WARNING: NON-STANDARD USE of ThingDef "specialDisplayRadius" determines mining radius!
+	defaults to 9 if not defined to be > 0 (rounded with Mathf.Round())
+	
+	
+	The rest of the properties are contained within <li Class="AutoDeepDrill.CompProperties_AutoDeepDrill">
+	
+	consumeDeepResources: true/false, default true, whether or not the drill will deplete deep resource tiles
+	resourceConsumptionMultiplier: >=0.0, default 1.0, multiplier for how much deep resource tiles are depleted by
+	resourceOutputMultiplier: >0.0, default 1.0, multiplier for output stack quantity (scales with game difficulty mineYieldFactor)
+	stoneChunkQuantity: <min>#</min><max>#</max>, default 1..1, how many stone chunks to spawn if no deep resources are present
+	spawnIntervalRange: <min>#</min><max>#</max>, default 2500..2500, how many ticks until drill job is complete (1hr ingame is 2500 ticks)
+-->
+
+	<ThingDef ParentName="AutoDrill">
+		<defName>autodrill_basic</defName>
+		<label>AutoDrill</label>
+		<description>A basic AutoDrill with a standard size bore for extracting minerals from deep under the surface. Average drill cycle of five and a half hours. Use a ground-penetrating scanner to detect the resources. This drill will extract stone chunks if no resources are present. Can be repositioned freely.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Production/DeepDrill</texPath>
+			<drawSize>(2,2)</drawSize>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(0.52, 0.53, 0.09)</volume>
+				<offset>(0,0,-0.43)</offset>
+			</shadowData>
+		</graphicData>
+		<size>(1,1)</size>
+    	<constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+		<costList>
+			<Steel>200</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>1</ComponentSpacer>
+		</costList>
+		<researchPrerequisites><li>AutoDrill_Research_Basic</li></researchPrerequisites>
+		<specialDisplayRadius>1.5</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>500</basePowerConsumption>
+			</li>
+			<li Class="AutoDeepDrill.CompProperties_AutoDeepDrill">
+				<resourceConsumptionMultiplier>0.8</resourceConsumptionMultiplier>
+				<resourceOutputMultiplier>0.8</resourceOutputMultiplier>
+				<spawnIntervalRange><min>12500</min><max>15000</max></spawnIntervalRange><!--5hrs to 6hrs-->
+			</li>
+			<li Class="CompProperties_CreatesInfestations"/>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="AutoDrill">
+		<defName>autodrill_giant</defName>
+		<label>Giant AutoDrill</label>
+		<description>Get quantity over quality with this giant AutoDrill with a wide bore. Extracts resources in bulk, sacrificing efficiency which depletes deep-crust mineral deposits more quickly. Average drill cycle of seven hours. Use a ground-penetrating scanner to detect the resources. This drill will extract MULTIPLE stone chunks, an average of three and a half per cycle, if no resources are present. Can be repositioned freely.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Production/DeepDrill</texPath>
+			<drawSize>(4,4)</drawSize>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(1.12, 1.13, 0.09)</volume>
+				<offset>(0,0,-0.80)</offset>
+			</shadowData>
+		</graphicData>
+		<size>(3,3)</size>
+    	<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+		<costList>
+			<Steel>400</Steel>
+			<Plasteel>20</Plasteel>
+			<ComponentIndustrial>6</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<researchPrerequisites><li>AutoDrill_Research_Giant</li></researchPrerequisites>
+		<specialDisplayRadius>4</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>1000</basePowerConsumption>
+			</li>
+			<li Class="AutoDeepDrill.CompProperties_AutoDeepDrill">
+				<stoneChunkQuantity><min>2</min><max>5</max></stoneChunkQuantity>
+				<resourceConsumptionMultiplier>3.0</resourceConsumptionMultiplier>
+				<resourceOutputMultiplier>2.0</resourceOutputMultiplier>
+				<spawnIntervalRange><min>15000</min><max>20000</max></spawnIntervalRange><!--6hrs to 8hrs-->
+			</li>
+			<li Class="CompProperties_CreatesInfestations"/>
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="AutoDrill">
+		<defName>autodrill_smart</defName>
+		<label>Smart AutoDrill</label>
+		<description>Get the most out of your deep-crust mineral deposits with this hyper-efficient AutoDrill. It's slow and has a small bore but utilizes advanced mining techniques as to not waste mineral deposits. Programmed with intelligent depth sensing to avoid infestations. Average drill cycle of twelve hours. Use a ground-penetrating scanner to detect the resources. This drill CANNOT extract stone chunks. Can be repositioned freely.</description>
+		<graphicData>
+			<graphicClass>Graphic_Single</graphicClass>
+			<texPath>Things/Building/Production/DeepDrill</texPath>
+			<drawSize>(1,1)</drawSize>
+			<drawRotated>false</drawRotated>
+			<shadowData>
+				<volume>(0.22, 0.23, 0.09)</volume>
+				<offset>(0,0,-0.2)</offset>
+			</shadowData>
+		</graphicData>
+		<size>(1,1)</size>
+    	<constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+		<costList>
+			<Steel>200</Steel>
+			<ComponentIndustrial>4</ComponentIndustrial>
+			<ComponentSpacer>2</ComponentSpacer>
+		</costList>
+		<researchPrerequisites><li>AutoDrill_Research_Smart</li></researchPrerequisites>
+		<specialDisplayRadius>0.5</specialDisplayRadius>
+		<comps>
+			<li Class="CompProperties_Flickable"/>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>300</basePowerConsumption>
+			</li>
+			<li Class="AutoDeepDrill.CompProperties_AutoDeepDrill">
+				<stoneChunkQuantity><min>0</min><max>0</max></stoneChunkQuantity>
+				<resourceConsumptionMultiplier>0.3</resourceConsumptionMultiplier>
+				<resourceOutputMultiplier>1.0</resourceOutputMultiplier>
+				<spawnIntervalRange><min>25000</min><max>35000</max></spawnIntervalRange><!--10hrs to 14hrs-->
+			</li>
+		</comps>
+	</ThingDef>
+</Defs>

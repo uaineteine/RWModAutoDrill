@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <AutoDrill_Research_Basic.label>自动钻探技术</AutoDrill_Research_Basic.label>
+  <AutoDrill_Research_Basic.description>发明了自动钻井机来解放矿工的劳动。</AutoDrill_Research_Basic.description>
+
+  <AutoDrill_Research_Giant.label>大口径钻探</AutoDrill_Research_Giant.label>
+  <AutoDrill_Research_Giant.description>忽视挖掘精度来提高挖掘效率和范围的钻探技术。</AutoDrill_Research_Giant.description>
+
+  <AutoDrill_Research_Smart.label>精密钻探</AutoDrill_Research_Smart.label>
+  <AutoDrill_Research_Smart.description>牺牲挖掘效率和范围，追求最大化利用矿藏的钻探技术。能够预防和规避地下昆虫的骚扰。</AutoDrill_Research_Smart.description>
+
+</LanguageData>

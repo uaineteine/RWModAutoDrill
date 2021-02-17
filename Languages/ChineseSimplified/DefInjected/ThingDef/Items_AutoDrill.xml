@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <autodrill_basic.label>自动钻井机</autodrill_basic.label>
+  <autodrill_basic.description>标准大小的自动钻井机，用于挖掘和提炼深埋地下的矿石资源。平均挖掘周期为5.5小时。如同手工钻井机一般，需要先进行地质勘探才能挖掘到资源，没有资源的情况下会挖掘石块，并且可以自由地卸载和重新安装。</autodrill_basic.description>
+
+  <autodrill_giant.label>大型自动钻井机</autodrill_giant.label>
+  <autodrill_giant.description>用于大规模快速挖掘地下资源的大型自动钻井机。具有非常高的挖掘效率和很大的挖掘范围，但挖掘精度不高，会损失一部分资源。平均挖掘周期为7小时。如同手工钻井机一般，需要先进行地质勘探才能挖掘到资源，没有资源的情况下会挖掘数个石块，并且可以自由地卸载和重新安装。</autodrill_giant.description>
+
+  <autodrill_smart.label>精密自动钻井机</autodrill_smart.label>
+  <autodrill_smart.description>运用先进技术的精密自动钻井机，用于最大限度的利用珍贵的地下矿藏。它速度慢，钻孔小，但不会浪费一丁点矿物，符合可持续发展的要求。精密的感应技术可以避免地下昆虫的侵扰。必须先进行地质勘探才能挖掘资源，它不会挖掘任何石头。可以自由地卸载和重新安装。</autodrill_smart.description>
+
+</LanguageData>

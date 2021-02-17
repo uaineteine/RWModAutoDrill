@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>AutoDrill</name>
+	<author>Alaestor, RedFog</author>
+	<packageId>RF.AutoDrill</packageId>
+	<supportedVersions><li>1.1</li></supportedVersions>
+	<description>	mv0.0.1
+
+Why stand around a drill all day? You've got better things to do!
+Automated drills!
+
+Speed based on a lv10 miner.
+Output yield scales with vanilla difficulty.
+
+Basic AutoDrill 
+	- standard size bore (2 radius, 3x3)
+	- average drill cycle of 5.5 hours
+	- 80% deposit consumption
+	- 80% resource output
+
+Giant AutoDrill
+	- wide bore (4 radius)
+	- average drill cycle of 7 hours
+	- high yield, more resources
+	- low efficiency which depletes deposits more quickly
+	- extract multiple stone chunks, an average of three and a half (3.5) per cycle
+	- 300% deposit consumption
+	- 200% resource output
+	
+Smart AutoDrill
+	- small bore (0.5 radius, 1x1)
+	- average drill cycle of 12 hours
+	- hyper-efficient
+	- cant cause infestation
+	- cant extract stone chunks
+	- 30% deposit consumption
+	- 100% resource output
+	</description>
+</ModMetaData>

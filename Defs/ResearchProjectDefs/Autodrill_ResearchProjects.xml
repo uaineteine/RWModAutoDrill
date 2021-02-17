@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<!--
+		vertical <researchViewY>1</researchViewY>
+		horizontal <researchViewX>1</researchViewX>
+	-->
+
+	<!--******** META ********-->
+
+	<ResearchProjectDef Abstract="True" Name="AutoDrill_Research">
+		<baseCost>4000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<requiredResearchFacilities><li>MultiAnalyzer</li></requiredResearchFacilities>
+		<requiredResearchBuilding>HiTechResearchBench</requiredResearchBuilding>
+	</ResearchProjectDef>
+
+	<!--******** INHERET ********-->
+
+	<ResearchProjectDef ParentName="AutoDrill_Research">
+		<defName>AutoDrill_Research_Basic</defName>
+		<prerequisites><li>DeepDrilling</li></prerequisites>
+		<label>Automatic Drilling</label>
+		<description>Got better things to do? If only there was a way to automate the mining of deep-crust minerals...</description>
+		<baseCost>4000</baseCost>
+		<techLevel>Industrial</techLevel>
+		<researchViewX>13</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="AutoDrill_Research">
+		<prerequisites><li>AutoDrill_Research_Basic</li></prerequisites>
+		<defName>AutoDrill_Research_Giant</defName>
+		<label>Giant AutoDrill</label>
+		<description>A giant wide-bore AutoDrill. Extracts resources in bulk, sacrificing efficiency which depletes deep-crust mineral deposits more quickly. Average drill cycle of seven hours. Can extract multiple stone chunks, an average of three and a half per cycle.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<researchViewX>14</researchViewX>
+		<researchViewY>1</researchViewY>
+	</ResearchProjectDef>
+	<ResearchProjectDef ParentName="AutoDrill_Research">
+		<prerequisites><li>AutoDrill_Research_Basic</li><li>GroundPenetratingScanner</li></prerequisites>
+		<defName>AutoDrill_Research_Smart</defName>
+		<label>Smart AutoDrill</label>
+		<description>A hyper-efficient AutoDrill. It's slow and has a small bore but utilizes advanced mining techniques as to not waste mineral deposits. Programmed with intelligent depth sensing to avoid infestations. Average drill cycle of twelve hours. This drill CANNOT extract stone chunks.</description>
+		<baseCost>2500</baseCost>
+		<techLevel>Spacer</techLevel>
+		<researchViewX>14</researchViewX>
+		<researchViewY>1.5</researchViewY>
+	</ResearchProjectDef>
+</Defs>
