@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <autodrill_basic.label>Automatische Bohren</autodrill_basic.label>
+  <autodrill_basic.description>Eine einfache automatische Bohrmaschine. Fünfeinhalb Stunden pro Stein</autodrill_basic.description>
+
+  <autodrill_giant.label>Automatische Großbohren</autodrill_giant.label>
+  <autodrill_giant.description>Eine Großer automatische Bohrmaschine. Dreieinhalb Stunden pro Stein</autodrill_giant.description>
+
+  <autodrill_smart.label>Automatische Schlaubohren</autodrill_smart.label>
+  <autodrill_smart.description>Eine schlau Bohrmaschine, die ohne Befall bohren kann. Zwölf Stunden pro Stein</autodrill_smart.description>
+
+</LanguageData>
