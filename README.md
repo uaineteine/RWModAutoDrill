@@ -14,7 +14,9 @@ Continued mod of AutoDrill (Honshitsu and RedFrog) with German and for support 1
 
 ## Donate
 
-If you like my work and are feeling generous, you can leave me tip on ko-fi. Even the smallest donation is more than welcome and will make my day :) [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C43PQ0I)
+If you like my work and are feeling generous, you can leave me tip on ko-fi. Even the smallest donation is more than welcome and will make my day :)
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/C0C43PQ0I)
 
 Alternatively you can become a patron :D
 
