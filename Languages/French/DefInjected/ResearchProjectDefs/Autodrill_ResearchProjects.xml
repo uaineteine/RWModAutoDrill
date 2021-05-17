@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <AutoDrill_Research_Basic.label>Foreuse automatique</AutoDrill_Research_Basic.label>
+  <AutoDrill_Research_Basic.description>Une simple foreuse automatique.</AutoDrill_Research_Basic.description>
+
+  <AutoDrill_Research_Giant.label>Grande foreuse automatique</AutoDrill_Research_Giant.label>
+  <AutoDrill_Research_Giant.description>Une grande perceuse automatique.</AutoDrill_Research_Giant.description>
+
+  <AutoDrill_Research_Smart.label>Foreuse intelligente</AutoDrill_Research_Smart.label>
+  <AutoDrill_Research_Smart.description>Une perceuse intelligente qui peut forer sans infestation.</AutoDrill_Research_Smart.description>
+</LanguageData>

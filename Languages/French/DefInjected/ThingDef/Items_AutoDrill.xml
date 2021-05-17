@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <autodrill_basic.label>Foreuse automatique</autodrill_basic.label>
+  <autodrill_basic.description>Une simple foreuse automatique. Cycle de cinq heures et demie.</autodrill_basic.description>
+
+  <autodrill_giant.label>Grande foreuse automatique</autodrill_giant.label>
+  <autodrill_giant.description>Une grande foreuse automatique. Cycle de trois heures et demie.</autodrill_giant.description>
+
+  <autodrill_smart.label>Foreuse intelligente</autodrill_smart.label>
+  <autodrill_smart.description>Une foreuse intelligente qui peut forer sans infestation. Cycle de 12 heures.</autodrill_smart.description>
+
+</LanguageData>
