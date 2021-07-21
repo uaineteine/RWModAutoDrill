@@ -7,9 +7,9 @@ Continued mod of AutoDrill (Honshitsu and RedFrog) with German and for support 1
 
 [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2403180152)
 
-## Version 1.0.0.1
+## Version 1.0.1
 
-* Supporting RimWorld 1.2
+* Supporting RimWorld 1.2 & 1.3
 * German support
 * French support - Provided by qux
 
